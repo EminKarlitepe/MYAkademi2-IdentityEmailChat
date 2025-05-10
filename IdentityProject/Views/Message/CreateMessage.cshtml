@@ -1,0 +1,44 @@
+﻿@model IdentityProject.Entities.Message
+
+@{
+    ViewData["Title"] = "Mesaj Gönder";
+    Layout = "~/Views/Shared/_MessageLayout.cshtml";
+}
+
+@if (TempData["Success"] != null)
+{
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        Swal.fire({
+            icon: 'success',
+            title: '@TempData["Success"]',
+            showConfirmButton: true
+        });
+    </script>
+}
+
+<div class="compose-content">
+    <div class="inbox-head d-flex align-items-center justify-content-between mb-3">
+        <h3 class="fw-bold">Yeni Mesaj</h3>
+    </div>
+    <form method="post">
+        <div class="mb-3">
+            <input type="email" asp-for="ReceiverEmail" class="form-control" placeholder="Alıcı Mail (ornek@mail.com)">
+        </div>
+        <div class="mb-3">
+            <input type="text" asp-for="SenderName" class="form-control" placeholder="Gönderen (Ad Soyad)">
+        </div>
+        <div class="mb-3">
+            <input type="text" asp-for="ReceiverName" class="form-control" placeholder="Alıcı Ad Soyad">
+        </div>
+        <div class="mb-3">
+            <input type="text" asp-for="Subject" class="form-control" placeholder="Konu">
+        </div>
+        <div class="mb-3">
+            <textarea asp-for="MessageDetail" class="form-control" rows="10" placeholder="Mesaj içeriği..."></textarea>
+        </div>
+        <div class="text-end">
+            <button type="submit" class="btn btn-primary">Gönder</button>
+        </div>
+    </form>
+</div>

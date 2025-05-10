@@ -1,0 +1,46 @@
+﻿@model List<IdentityProject.Entities.Message>
+
+@{
+    ViewData["Title"] = "Inbox";
+    Layout = "~/Views/Shared/_MessageLayout.cshtml";
+}
+
+<div class="email-right-box">
+    <form method="get" asp-action="Inbox" class="mb-3">
+        <div class="input-group">
+            <input type="text" name="search" class="form-control" placeholder="Konuya göre ara..." value="@ViewBag.search" />
+            <div class="input-group-append">
+                <button type="submit" class="btn btn-primary">Ara</button>
+            </div>
+        </div>
+    </form>
+
+    <form method="post" id="messageForm">
+        <div class="toolbar mb-3 d-flex gap-2">
+            <button type="submit" formaction="/Message/ChangeMessageStatus" class="btn btn-dark">Okundu Olarak İşaretle</button>
+            <button type="submit" formaction="/Message/MoveToTrash" class="btn btn-danger">Çöp Kutusuna Taşı</button>
+        </div>
+
+        <div class="email-list mt-3">
+            @foreach (var item in Model)
+            {
+                <div class="message border-bottom py-2">
+                    <div class="d-flex align-items-center">
+                        <input type="checkbox" name="messageID" value="@item.MessageId" class="form-check-input me-2" />
+                        <a href="/Message/MessageDetail/@item.MessageId" class="flex-grow-1 text-decoration-none">
+                            <div class="d-flex justify-content-between">
+                                <div class="subject fw-bold text-light">@item.Subject</div>
+                                <div class="date text-muted">@item.SendDate.ToString("dd-MMM-yyyy")</div>
+                            </div>
+                            <div class="text-muted small">@item.SenderEmail</div>
+                            @if (!item.IsRead)
+                            {
+                                <span class="badge bg-danger">Yeni</span>
+                            }
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+    </form>
+</div>

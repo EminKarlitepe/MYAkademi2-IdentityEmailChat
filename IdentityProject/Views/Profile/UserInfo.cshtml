@@ -1,0 +1,62 @@
+﻿@model IdentityProject.Entities.AppUser
+
+@{
+    ViewData["Title"] = "UserInfo";
+    Layout = "~/Views/Shared/_MessageLayout.cshtml";
+}
+
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 col-xl-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="media align-items-center mb-4">
+                            <div class="media-body">
+                                <h3 class="mb-0">@ViewBag.Name @ViewBag.Surname</h3>
+                                <p class="text-muted mb-0">#@ViewBag.Username</p>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col">
+                                <div class="card card-profile text-center">
+                                    <span class="mb-1 text-primary"><i class="icon-people"></i></span>
+                                    <h3 class="mb-0">@ViewBag.RecipientEmailAddressCount</h3>
+                                    <p class="text-muted px-4">Alınan Mesaj Sayısı</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card card-profile text-center">
+                                    <span class="mb-1 text-warning"><i class="icon-user-follow"></i></span>
+                                    <h3 class="mb-0">@ViewBag.SenderEmailAddressCount</h3>
+                                    <p class="text-muted">Gönderilen Mesaj Sayısı</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h4>Bilgilerim</h4>
+                        <ul class="card-profile__info">
+                            <li><strong class="text-white mr-4">Email:</strong> <span>@ViewBag.Email</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 col-xl-9">
+                <div class="card">
+                    <h4 class="card-title">Kullanıcı Bilgilerim</h4>
+                    <div class="card-body">
+                        <h5 class="card-title">Ad Soyad</h5>
+                        <p>@ViewBag.Name @ViewBag.Surname</p>
+                        <h5 class="card-title">Kullanıcı Adı</h5>
+                        <p>@ViewBag.Username</p>
+                        <h5 class="card-title">Email</h5>
+                        <p>@ViewBag.Email</p>
+                        <h5 class="card-title">Alınan Mesaj Sayısı</h5>
+                        <p>@ViewBag.RecipientEmailAddressCount</p>
+                        <h5 class="card-title">Gönderilen Mesaj Sayısı</h5>
+                        <p>@ViewBag.SenderEmailAddressCount</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

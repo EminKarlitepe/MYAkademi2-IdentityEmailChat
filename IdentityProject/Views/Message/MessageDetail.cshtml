@@ -1,0 +1,17 @@
+﻿@model IdentityProject.Entities.Message
+@{
+    ViewData["Title"] = "Mesaj Detayı";
+    Layout = "~/Views/Shared/_MessageLayout.cshtml";
+}
+
+<h2>Mesaj Detayı</h2>
+
+<div class="card p-4">
+    <p><strong>Gönderen:</strong> @Model.SenderEmail</p>
+    <p><strong>Alıcı:</strong> @Model.ReceiverEmail</p>
+    <p><strong>Konu:</strong> @Model.Subject</p>
+    <p><strong>Mesaj:</strong> @Model.MessageDetail</p>
+    <p><strong>Tarih:</strong> @Model.SendDate.ToString("dd.MM.yyyy HH:mm")</p>
+</div>
+<a href="javascript:history.back()" class="btn btn-secondary mt-3">← Geri Dön</a>
+
