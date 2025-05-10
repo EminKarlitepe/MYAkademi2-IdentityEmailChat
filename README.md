@@ -72,7 +72,7 @@ Bu proje, M\&Y Akademi danışmanlık bünyesinde ve Murat Yücedağ hocamın e�
 
 ### Profil Sayfası
 
-* Kullanıcı bilgileri (ad, soyad, e-posta, kullanıcı adı, profil fotoğrafı) görüntülenir.
+* Kullanıcı bilgileri (ad, soyad, e-posta, kullanıcı adı) görüntülenir.
 * Gönderilen ve alınan mesaj sayıları dinamik olarak hesaplanır.
 * Tüm bilgiler güncellenebilir.
 ![UserInfo](https://github.com/user-attachments/assets/8c680712-2b81-4ff4-8412-f530a411eb8a)
