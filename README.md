@@ -27,14 +27,16 @@ Bu proje, M\&Y Akademi danışmanlık bünyesinde ve Murat Yücedağ hocamın e�
 * Kullanıcı kayıt işlemi yapılır.
 * Şifreler hash’lenerek veritabanında saklanır.
 * Doğru şifre yapısı için validator kuralları tanımlanmıştır.
-![register](https://github.com/user-attachments/assets/d0c18ec7-49af-442c-b492-a3a0673f9ea6)
-![validation](https://github.com/user-attachments/assets/5941cf35-1bbd-473b-9611-3cc58a8580ca)
+![Register](https://github.com/user-attachments/assets/4f79c1ff-c451-4558-88aa-7c48c3d40bbf)
+![Validation](https://github.com/user-attachments/assets/0c2bc803-751d-4c7c-a673-086dc97f2eb1)
+
 
 ### 2. Giriş Sayfası (Login)
 
 * Kullanıcı kimlik doğrulama işlemi gerçekleştirilir.
 * 5 hatalı giriş denemesinden sonra 5 dakika süreyle erişim engellenir.
-![login](https://github.com/user-attachments/assets/f55824ff-9b5a-4ef3-bd1a-79e4bf7d840a)
+![Login](https://github.com/user-attachments/assets/3b83ad1e-f1ba-4def-b5a5-7fe6249b3cb3)
+
 
 ### 3. Kullanıcı Paneli
 
